@@ -15,3 +15,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: make
       run: make
+    - name: Upload Linux artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux
+        path: |
+          dumpiff
+          makesp2
+          modeltool
